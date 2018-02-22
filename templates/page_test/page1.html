@@ -1,0 +1,21 @@
+<html>
+<head>
+    <title>分页</title>
+</head>
+<body>
+显示当前页的地区信息：<br>
+<ul>
+{% for page in page1 %}
+    <li>{{ page.atitle }}</li>
+{% endfor %}
+
+</ul>
+<hr>
+显示页码信息：当前页码没有链接，其它页码有链接<br>
+{% for index in p.page_range %}
+    <a href="/show_page{{ index }}">{{ index }}</a>
+{% endfor %}
+
+
+</body>
+</html>
